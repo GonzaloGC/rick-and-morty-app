@@ -61,7 +61,7 @@ const App = () => {
   return (
     <>
       <section>
-        <img className="logo" src="public/Rick-and-Morty-logo.png" alt="" />
+        <img className="logo" src="/Rick-and-Morty-logo.png" alt="" />
         {imagesRyM}
       </section>
     </>
