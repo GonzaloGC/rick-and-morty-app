@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 // Supports weights 100-900
 import '@fontsource-variable/lexend-deca';
 import "./App.css";
+import { Header } from "./Header";
+// import { Header } from "./Header";
 
 const App = () => {
   const [img, setImg] = useState([]);
@@ -38,7 +40,6 @@ const App = () => {
         <div>
             <span className="name">{imgRyM.name}
             </span>
-          
         </div>
         <div>
           <div>
@@ -60,8 +61,8 @@ const App = () => {
 
   return (
     <>
+    <Header />
       <section>
-        <img className="logo" src="/Rick-and-Morty-logo.png" alt="" />
         {imagesRyM}
       </section>
     </>

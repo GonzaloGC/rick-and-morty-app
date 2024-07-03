@@ -6,7 +6,7 @@ section{
 
   column-gap: 10px;
   row-gap: 10px;
-  max-width: 600px;
+  max-width: 1200px;
   margin: 0 auto;
   
 }
@@ -15,7 +15,7 @@ section{
   justify-content: flex-start;
   align-items: center;
   gap: 25px;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   border-radius:  10px;
   background-color: #3c3e44;
   /* display: grid;
@@ -55,7 +55,7 @@ img{
   scale: 1.3;
 } */
 img:hover{
-  scale: 1.1;
+  scale: 1.05;
   border-radius:  10px;
 }
 
@@ -79,7 +79,8 @@ img:hover{
 
 .name{
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: clamp(20px, 4vw +1rem, 48px);
+  /* font-size: 20px; */
   font-weight: 900;
 }
 
