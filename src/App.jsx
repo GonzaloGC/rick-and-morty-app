@@ -5,10 +5,32 @@ import "./App.css";
 import { Header } from "./Header";
 import { Input } from "./Input";
 // import { Header } from "./Header";
+import { motion } from "framer-motion";
+
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
 
 const App = () => {
   const [img, setImg] = useState([]);
   const [error, setError] = useState(null);
+  const [filterName, setFilterName] = useState('')
 
   useEffect(() => {
     const dataRyM = async () => {
@@ -34,8 +56,19 @@ const App = () => {
     dataRyM();
   }, []);
 
-  const imagesRyM = img.map((imgRyM) => (
-    <div key={imgRyM.id} className="container-img-rickAndMorty">
+  const handleChange = (event) => {
+    setFilterName(event.target.value)
+  };
+
+  const findCardName = img.filter((data) =>
+    data.name.toLowerCase().includes(filterName.toLowerCase())
+  )
+  const imagesRyM = findCardName.map((imgRyM) => (
+    <motion.div
+      key={imgRyM.id}
+      className="container-img-rickAndMorty"
+      variants={item}
+    >
       <img className="images" src={imgRyM.image} alt="" />
       <section className="container-info">
         <div>
@@ -58,14 +91,16 @@ const App = () => {
           </div>
         </div>
       </section>
-    </div>
+    </motion.div>
   ));
 
   return (
     <>
       <Header />
-      <Input />
-      <section>{img && imagesRyM}</section>
+      <Input handleChange={handleChange} />
+      <motion.section variants={container} initial="hidden" animate="visible">
+        {img && imagesRyM}
+      </motion.section>
     </>
   );
 };

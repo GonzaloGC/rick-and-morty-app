@@ -8,7 +8,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  overflow-y: scroll;
+}
 
 body {
   margin: 0;
@@ -19,4 +26,5 @@ body {
   /* min-width: 320px;
   min-height: 100vh; */
   font-family: 'Lexend Deca Variable', sans-serif;
+  overflow: hidden;
 }
