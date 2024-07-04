@@ -30,7 +30,7 @@ const item = {
 const App = () => {
   const [img, setImg] = useState([]);
   const [error, setError] = useState(null);
-  const [filterName, setFilterName] = useState('')
+  const [filterName, setFilterName] = useState("");
 
   useEffect(() => {
     const dataRyM = async () => {
@@ -57,12 +57,12 @@ const App = () => {
   }, []);
 
   const handleChange = (event) => {
-    setFilterName(event.target.value)
+    setFilterName(event.target.value);
   };
 
   const findCardName = img.filter((data) =>
     data.name.toLowerCase().includes(filterName.toLowerCase())
-  )
+  );
   const imagesRyM = findCardName.map((imgRyM) => (
     <motion.div
       key={imgRyM.id}

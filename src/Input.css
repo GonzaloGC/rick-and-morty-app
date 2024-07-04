@@ -3,7 +3,8 @@ form{
   display: flex;
   justify-content: center;
   align-content: center;
-  padding-bottom: 30px;
+  padding-bottom: 45px;
+  padding-top: 40px;
 }
 .input{
   padding-left: 20px;
@@ -18,8 +19,11 @@ form{
   outline: none;
   box-sizing: border-box;
 }
+.input:focus::placeholder{
+  color: rgba(128, 128, 128, 0.611);
+}
 .input::placeholder{
-  color: rgba(128, 128, 128, 0.475);
+  color: rgba(128, 128, 128, 0.177);
 }
 .input[type="text"]{
   /* margin-left: 20px; */
@@ -29,7 +33,7 @@ form{
   box-sizing: border-box;
 }
 .input[type="text"]:focus{
-  color: brown;
+  color: white;
   box-sizing: border-box;
   outline: none;
   border: 1px solid rgb(37, 3, 78);

@@ -1,3 +1,20 @@
+@font-face {
+  font-family: 'rickAndMortyFont';
+  src: url('./assets/font/get_schwifty.ttf');
+  color: #00b5cc;
+}
+header{
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  margin: 0 auto;
+}
+img{
+  position: relative;
+
+}
 .logo{
   display: flex;
   justify-content: center;
@@ -5,4 +22,64 @@
   width: 350px;
   height: auto;
   /* margin: 0 auto; */
+}
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  /* padding-bottom: 25px; */
+  /* top: 160px; */
+  position: absolute;
+  text-align: center;
+  font-family: 'rickAndMortyFont';
+  /* border: 2px solid #5ee867; */
+  /* text-shadow: 
+  -1px -1px 10px #5ee867, 
+  1px -1px 0 #5ee867, 
+  -1px 1px 0 #5ee867, 
+  1px 1px 0 #5ee867;  */
+  text-shadow: 0px 0px 50px #5ee867;
+  /* text-decoration-line: line-through; */
+  color: #39bac7;
+  /* outline: 2px solid #19685a; */
+}
+.subtitle{
+  /* display: inline-block; */
+  /* bottom: 55px; */
+  top: 190px;
+  position: absolute;
+  text-align: center;
+  font-family: 'rickAndMortyFont';
+  color: #8bba2c;
+  text-shadow: 0px 0px 50px yellow;
+  /* box-shadow: #8bba2c; */
+}
+.morty{
+
+}
+.and{
+  font-size: 25px;
+  margin-top: 35px;
+  padding: 0 15px;
+}
+.letter-m{
+  font-size: 60px;
+}
+.first-letter{
+  display: inline-block;
+  font-size: 100px;
+  font-weight: 500;
+  transform: rotate(-15deg);
+  /* transform: skew(-0.06turn, 18deg); */
+  /* transform: rotateX(90deg); */
+  /* transform: rotate(90deg);
+  transform: skew(50px); */
+}
+.ultimate-letter{
+  /* top: 25px; */
+  display: inline-block;
+  font-size: 100px;
+  font-weight: 500;
+  transform: rotate(15deg);
 }
