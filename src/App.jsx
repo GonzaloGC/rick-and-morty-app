@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 // Supports weights 100-900
-import '@fontsource-variable/lexend-deca';
+import "@fontsource-variable/lexend-deca";
 import "./App.css";
 import { Header } from "./Header";
+import { Input } from "./Input";
 // import { Header } from "./Header";
 
 const App = () => {
@@ -15,7 +16,7 @@ const App = () => {
         const info = await fetch(
           "https://rickandmortyapi.com/api/character/?page=19"
         );
-        console.log(info)
+        console.log(info);
         if (!info.ok) {
           throw new Error("TENEMOS UN ERROR GIGANTE");
         }
@@ -23,7 +24,7 @@ const App = () => {
         // console.log(infojson)
         const jsonResult = infojson.results;
         // const resultImages = jsonResult.image
-        console.log(jsonResult)
+        console.log(jsonResult);
         setImg(jsonResult);
       } catch (error) {
         console.log("este es un error:", error);
@@ -35,36 +36,36 @@ const App = () => {
 
   const imagesRyM = img.map((imgRyM) => (
     <div key={imgRyM.id} className="container-img-rickAndMorty">
-      <img  src={imgRyM.image} alt="" />
+      <img className="images" src={imgRyM.image} alt="" />
       <section className="container-info">
         <div>
-            <span className="name">{imgRyM.name}
-            </span>
+          <span className="name">{imgRyM.name}</span>
         </div>
         <div>
           <div>
-            <p className="type">Species:<br/>
-              <span className="species">{imgRyM.species}
-              </span>
+            <p className="type">
+              Species:
+              <br />
+              <span className="species">{imgRyM.species}</span>
             </p>
           </div>
           <div>
-            <p>Gender:<br/>
-              <span className="gender">{imgRyM.gender}
-              </span>
+            <p>
+              Gender:
+              <br />
+              <span className="gender">{imgRyM.gender}</span>
             </p>
           </div>
         </div>
       </section>
-     </div>
+    </div>
   ));
 
   return (
     <>
-    <Header />
-      <section>
-        {imagesRyM}
-      </section>
+      <Header />
+      <Input />
+      <section>{img && imagesRyM}</section>
     </>
   );
 };
