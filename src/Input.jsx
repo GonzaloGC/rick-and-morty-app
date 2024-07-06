@@ -6,10 +6,12 @@ export const Input = ({handleChange}) => {
   }
   return (
     <>
-      <form>
-        {/* <label htmlFor="">escribe aqui</label> */}
-        <input onChange={handleChange} onSubmit={handleSubmit} className="input" type="text" placeholder="Search character"/>
-      </form>
+      <div className='container-form'>
+        <form>
+          {/* <label htmlFor="">escribe aqui</label> */}
+          <input onChange={handleChange} onSubmit={handleSubmit} className="input" type="text" placeholder="Search character"/>
+        </form>
+      </div>
     </>
   );
 };

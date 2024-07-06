@@ -1,12 +1,17 @@
-form{
-  /* width: 200px; */
+/* .container-form{
+  height: auto;
+} */
+form {
+  position: sticky;
+  top: 100px;
   display: flex;
   justify-content: center;
   align-content: center;
   padding-bottom: 45px;
   padding-top: 40px;
+  z-index: 1000;
 }
-.input{
+.input {
   padding-left: 20px;
   width: 100px;
   height: 32px;
@@ -19,20 +24,19 @@ form{
   outline: none;
   box-sizing: border-box;
 }
-.input:focus::placeholder{
+.input:focus::placeholder {
   color: rgba(128, 128, 128, 0.611);
 }
-.input::placeholder{
+.input::placeholder {
   color: rgba(128, 128, 128, 0.177);
 }
-.input[type="text"]{
-  /* margin-left: 20px; */
+.input[type="text"] {
   padding-left: 20px;
   width: 100%;
   max-width: 300px;
   box-sizing: border-box;
 }
-.input[type="text"]:focus{
+.input[type="text"]:focus {
   color: white;
   box-sizing: border-box;
   outline: none;

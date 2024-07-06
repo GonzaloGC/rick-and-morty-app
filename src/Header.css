@@ -4,12 +4,15 @@
   color: #00b5cc;
 }
 header{
+  position: sticky;
+  top: 0;
   height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 350px;
   margin: 0 auto;
+  
 }
 img{
   position: relative;
@@ -39,7 +42,7 @@ img{
   1px -1px 0 #5ee867, 
   -1px 1px 0 #5ee867, 
   1px 1px 0 #5ee867;  */
-  text-shadow: 0px 0px 50px #5ee867;
+  text-shadow: 0px 0px 50px #5ee867;/*  */
   /* text-decoration-line: line-through; */
   color: #39bac7;
   /* outline: 2px solid #19685a; */
